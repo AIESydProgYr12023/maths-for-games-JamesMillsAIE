@@ -2,9 +2,9 @@
 ---
 # Academy of Interactive Entertainment
 
-**Student:** < Your Name >
+**Student:** James Mills
 
-**Student Id:** < Student Id >
+**Student Id:** s160668
 
 **Teacher:** James Mills
 
@@ -15,7 +15,7 @@
 This visual studio project contains the classwork exercises, walkthroughs and assessment projects for the Math for Games subject.
 
 ## Permisions
-The work included in this repo has been developed by < Your name > in conjunction with AIE course material. The content of this work **must** remain private.
+The work included in this repo has been developed by James Mills in conjunction with AIE course material. The content of this work **must** remain private.
 
 Permision is NOT granted to share or redistribute this work to others
 
