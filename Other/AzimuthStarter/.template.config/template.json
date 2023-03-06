@@ -1,0 +1,16 @@
+{
+    "author": "Academy of Interactive Entertainment - Sydney",
+    "name": "Azimuth Starter",
+    "description": "A starter project using the Azimuth framework developed by James Mills and the Year 1 Programmers of 2023.",
+    "defaultName": "Azimuth",
+    "classifications": ["Graphical"],
+    "identity": "AIE.Azimuth.Starter",
+    "shortName": "azimuthstarter",
+    "tags": {
+        "type": "project",
+        "language": "C#",
+        "platform": ".NET"
+    },
+    "sourceName": "AzimuthStarter",
+    "preferNameDirectory": "true"
+}
