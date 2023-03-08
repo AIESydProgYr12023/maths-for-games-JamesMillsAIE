@@ -5,14 +5,54 @@
 	{
 		/// <summary>Degrees-to-radians conversion constant. Multiply a degree angle by this to get the radians equivalent.</summary>
 		public const float DEG_2_RAD = MathF.PI * 2f / 360f;
+
 		/// <summary>Radians-to-degrees conversion constant. Multiply a radian angle by this to get the degrees equivalent.</summary>
 		public const float RAD_2_DEG = 1f / DEG_2_RAD;
+
+		/// <summary>The standard mathematical constant, PI (3.14).</summary>
+		public const float PI = MathF.PI;
+
+		/// <summary>A number as close to 0 as possible without actually being 0.</summary>
+		public const float EPSILON = float.Epsilon;
+
+		/// <summary>The minimum possible value a float can be.</summary>
+		public const float NEGATIVE_INFINITY = float.NegativeInfinity;
 		
+		/// <summary>The maximum possible value a float can be.</summary>
+		public const float POSITIVE_INFINITY = float.PositiveInfinity;
+
 		/// <summary>Returns the smaller of the two passed values.</summary>
 		public static float Min(float _a, float _b) => _a < _b ? _a : _b;
 
 		/// <summary>Returns the larger of the two passed values.</summary>
 		public static float Max(float _a, float _b) => _a > _b ? _a : _b;
+
+		/// <summary>Calculates the Sine value for the passed Theta Angle.</summary>
+		public static float Sin(float _theta) => MathF.Sin(_theta);
+		
+		/// <summary>Calculates the Cosine value for the passed Theta Angle.</summary>
+		public static float Cos(float _theta) => MathF.Cos(_theta);
+		
+		/// <summary>Calculates the Arc Tangent value for the passed x and y.</summary>
+		public static float Atan2(float _x, float _y) => MathF.Atan2(_y, _x);
+
+		/// <summary>Calculates the Logarithmic value for the passed value.</summary>
+		public static float Log(float _val) => MathF.Log(_val);
+
+		/// <summary>Raises the passed value to the passed power.</summary>
+		/// <param name="_val">The value being raised.</param>
+		/// <param name="_power">The power the value is being raised to.</param>
+		public static float Pow(float _val, float _power) => MathF.Pow(_val, _power);
+
+		/// <summary>Calculates the Exponential value for the passed value.</summary>
+		public static float Exp(float _val) => MathF.Exp(_val);
+
+		/// <summary>Gets the sign of the passed value.</summary>
+		/// <returns>-1 if the value is a negative number, +1 if the number is a positive number.</returns>
+		public static float Sign(float _val) => _val < 0 ? -1 : 1;
+
+		/// <summary>Gets the Absolute value for the passed value.</summary>
+		public static float Abs(float _val) => MathF.Abs(_val);
 
 		/// <summary>Rounds a value to the nearest whole number, if it is at exactly 0.5, it will round up.</summary>
 		/// <param name="_value">The value we want to accurately round.</param>
@@ -43,15 +83,12 @@
 
 			if(_value > 1f)
 				return 1f;
-			
+
 			return _value;
 		}
 
 		/// <summary>Checks if two floats are almost or exactly the same value.</summary>
-		public static bool Approximately(float _a, float _b)
-		{
-			return MathF.Abs(_b - _a) < Max(0.000001f * Max(MathF.Abs(_a), MathF.Abs(_b)), float.Epsilon * 8f);
-		}
+		public static bool Approximately(float _a, float _b) => Abs(_b - _a) < Max(0.000001f * Max(Abs(_a), Abs(_b)), EPSILON * 8f);
 
 		/// <summary>Takes a value from one range and changes it to fit another.</summary>
 		/// <example>0.5 starts in 0 - 1 | Remaps to 0 in the range -1 - 1.</example>
