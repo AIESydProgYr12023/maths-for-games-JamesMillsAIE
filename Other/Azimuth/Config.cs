@@ -1,4 +1,6 @@
-﻿using Raylib_cs;
+﻿using MathLib;
+
+using Raylib_cs;
 
 using System.Numerics;
 
@@ -27,10 +29,10 @@ namespace Azimuth
 
 			Type valueType = typeof(VALUE);
 
-			// is VALUE a Vector2
-			if(valueType == typeof(Vector2))
+			// is VALUE a Vec2
+			if(valueType == typeof(Vec2))
 			{
-				// Attempt to get the vector2 value from the config, then try to change it to the correct type
+				// Attempt to get the Vec2 value from the config, then try to change it to the correct type
 				return (VALUE)Convert.ChangeType(instance.vector2s[_category][_key], valueType);
 			}
 			
@@ -82,7 +84,7 @@ namespace Azimuth
 		}
 
 		// ReSharper disable once InconsistentNaming
-		private readonly Dictionary<string, Dictionary<string, Vector2>> vector2s;
+		private readonly Dictionary<string, Dictionary<string, Vec2>> vector2s;
 		// ReSharper disable once InconsistentNaming
 		private readonly Dictionary<string, Dictionary<string, Vector3>> vector3s;
 		private readonly Dictionary<string, Dictionary<string, Color>> colors;
@@ -93,7 +95,7 @@ namespace Azimuth
 
 		private Config()
 		{
-			vector2s = new Dictionary<string, Dictionary<string, Vector2>>();
+			vector2s = new Dictionary<string, Dictionary<string, Vec2>>();
 			vector3s = new Dictionary<string, Dictionary<string, Vector3>>();
 			colors = new Dictionary<string, Dictionary<string, Color>>();
 			ints = new Dictionary<string, Dictionary<string, int>>();
@@ -200,7 +202,7 @@ namespace Azimuth
 
 				if(converted.Length == 2)
 				{
-					InsertValue(_varName, new Vector2(converted[0], converted[1]), _category, vector2s);
+					InsertValue(_varName, new Vec2(converted[0], converted[1]), _category, vector2s);
 				}
 				else if(converted.Length == 3)
 				{

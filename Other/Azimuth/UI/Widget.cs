@@ -1,20 +1,20 @@
-﻿using Raylib_cs;
+﻿using MathLib;
 
-using System.Numerics;
+using Raylib_cs;
 
 namespace Azimuth.UI
 {
 	public abstract class Widget : IComparable<Widget>
 	{
-		public Rectangle Bounds => new Rectangle(position.X, position.Y, size.X, size.Y);
+		public Rectangle Bounds => new Rectangle(position.x, position.y, size.x, size.y);
 		
-		public Vector2 position;
-		public Vector2 size;
+		public Vec2 position;
+		public Vec2 size;
 		public bool focused;
 		
 		protected int drawLayer;
 
-		protected Widget(Vector2 _position, Vector2 _size)
+		protected Widget(Vec2 _position, Vec2 _size)
 		{
 			position = _position;
 			size = _size;
@@ -31,7 +31,7 @@ namespace Azimuth.UI
 			Raylib.DrawRectangleRec(Bounds, Color.WHITE);
 		}
 
-		public virtual void Update(Vector2 _mousePos)
+		public virtual void Update(Vec2 _mousePos)
 		{
 			focused = Raylib.CheckCollisionPointRec(_mousePos, Bounds);
 		}

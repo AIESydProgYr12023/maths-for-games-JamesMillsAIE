@@ -1,6 +1,6 @@
-﻿using Raylib_cs;
+﻿using MathLib;
 
-using System.Numerics;
+using Raylib_cs;
 
 namespace Azimuth.UI
 {
@@ -12,14 +12,14 @@ namespace Azimuth.UI
 
 		private ColorBlock colors;
 
-		protected InteractableWidget(Vector2 _position, Vector2 _size, ColorBlock _colors) 
+		protected InteractableWidget(Vec2 _position, Vec2 _size, ColorBlock _colors) 
 			: base(_position, _size)
 		{
 			colors = _colors;
 			State = InteractionState.Normal;
 		}
 
-		public override void Update(Vector2 _mousePos)
+		public override void Update(Vec2 _mousePos)
 		{
 			base.Update(_mousePos);
 
