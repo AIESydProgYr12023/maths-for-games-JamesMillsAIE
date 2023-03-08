@@ -14,6 +14,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathLibTests", "Assessments\MathLibTests\MathLibTests.csproj", "{961E4760-C030-47D4-9AD8-207F417A978C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzimuthStarter", "Other\AzimuthStarter\AzimuthStarter.csproj", "{9D99AB63-9231-408E-AB4B-1FC294C86EB0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2CF08F9C-C111-40B7-BDE2-01380FF34988} = {2CF08F9C-C111-40B7-BDE2-01380FF34988}
+		{DACE6A2B-BE37-4B09-87C7-C9FA482FD30A} = {DACE6A2B-BE37-4B09-87C7-C9FA482FD30A}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Azimuth", "Other\Azimuth\Azimuth.csproj", "{2CF08F9C-C111-40B7-BDE2-01380FF34988}"
 EndProject

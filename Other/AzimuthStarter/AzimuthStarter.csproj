@@ -34,6 +34,9 @@
     <Reference Include="Azimuth">
       <HintPath>Dependencies\Azimuth.dll</HintPath>
     </Reference>
+    <Reference Include="MathLib">
+      <HintPath>Dependencies\MathLib.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

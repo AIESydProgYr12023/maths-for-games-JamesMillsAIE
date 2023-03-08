@@ -10,4 +10,8 @@
     <PackageReference Include="Raylib-cs" Version="4.0.0.1" />
   </ItemGroup>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy /Y &quot;$(TargetDir)$(TargetName).dll&quot; &quot;$(SolutionDir)Other\AzimuthStarter\Dependencies\$(TargetName).dll&quot;" />
+  </Target>
+
 </Project>
