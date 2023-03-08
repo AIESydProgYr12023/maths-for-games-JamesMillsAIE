@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzimuthStarter", "Other\Azi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Azimuth", "Other\Azimuth\Azimuth.csproj", "{2CF08F9C-C111-40B7-BDE2-01380FF34988}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIE01_Binary", "Exercises\AIE01_Binary\AIE01_Binary.csproj", "{83357E86-E9FA-4726-8EA3-549CCD0D6D56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{2CF08F9C-C111-40B7-BDE2-01380FF34988}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CF08F9C-C111-40B7-BDE2-01380FF34988}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CF08F9C-C111-40B7-BDE2-01380FF34988}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83357E86-E9FA-4726-8EA3-549CCD0D6D56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83357E86-E9FA-4726-8EA3-549CCD0D6D56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83357E86-E9FA-4726-8EA3-549CCD0D6D56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83357E86-E9FA-4726-8EA3-549CCD0D6D56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{961E4760-C030-47D4-9AD8-207F417A978C} = {0214696B-6CE0-4670-BC5A-77AE88355BFF}
 		{9D99AB63-9231-408E-AB4B-1FC294C86EB0} = {CEB09D4E-4B90-41B2-B2FF-A2EF181470AD}
 		{2CF08F9C-C111-40B7-BDE2-01380FF34988} = {CEB09D4E-4B90-41B2-B2FF-A2EF181470AD}
+		{83357E86-E9FA-4726-8EA3-549CCD0D6D56} = {42D8ABB5-58E8-490F-9322-76A2C4A50D1F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0C38F843-9D7D-4A5D-A45A-1764A250CB80}
