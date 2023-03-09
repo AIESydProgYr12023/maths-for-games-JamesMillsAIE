@@ -44,6 +44,11 @@ namespace MathLib
 
 	#region Operators
 
+		public static float Distance(Vec2 _lhs, Vec2 _rhs)
+		{
+			return (_lhs - _rhs).Magnitude();
+		}
+
 		public static Vec2 operator +(Vec2 _lhs, Vec2 _rhs)
 		{
 			return new Vec2(_lhs.x + _rhs.x, _lhs.y + _rhs.y);
