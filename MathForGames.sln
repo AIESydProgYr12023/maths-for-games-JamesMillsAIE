@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIE04_MoveTowardPoint", "Ex
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIE05_FollowPath", "Exercises\AIE05_FollowPath\AIE05_FollowPath.csproj", "{CA685FC8-892C-4589-B6B1-DA2AFA333A4B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIE06_CrossFinishLine", "Exercises\AIE06_CrossFinishLine\AIE06_CrossFinishLine.csproj", "{397617A6-E184-4844-8013-7250169D4B8E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,10 @@ Global
 		{CA685FC8-892C-4589-B6B1-DA2AFA333A4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA685FC8-892C-4589-B6B1-DA2AFA333A4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA685FC8-892C-4589-B6B1-DA2AFA333A4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{397617A6-E184-4844-8013-7250169D4B8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{397617A6-E184-4844-8013-7250169D4B8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{397617A6-E184-4844-8013-7250169D4B8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{397617A6-E184-4844-8013-7250169D4B8E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,6 +93,7 @@ Global
 		{AA3E7513-2084-4DC8-B081-2E021716F94D} = {42D8ABB5-58E8-490F-9322-76A2C4A50D1F}
 		{F841248F-9D55-45DA-8EBE-1D7759CDC9CE} = {42D8ABB5-58E8-490F-9322-76A2C4A50D1F}
 		{CA685FC8-892C-4589-B6B1-DA2AFA333A4B} = {42D8ABB5-58E8-490F-9322-76A2C4A50D1F}
+		{397617A6-E184-4844-8013-7250169D4B8E} = {42D8ABB5-58E8-490F-9322-76A2C4A50D1F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0C38F843-9D7D-4A5D-A45A-1764A250CB80}

@@ -9,8 +9,8 @@ namespace MathLib
 		public static Vec2 zero = new();
 		public static Vec2 one = new(1, 1);
 		public static Vec2 half = new(0.5f, 0.5f);
-		public static Vec2 up = new(0, 1);
-		public static Vec2 down = new(0, -1);
+		public static Vec2 up = new(0, -1);
+		public static Vec2 down = new(0, 1);
 		public static Vec2 right = new(1, 0);
 		public static Vec2 left = new(-1, 0);
 
@@ -29,7 +29,17 @@ namespace MathLib
 
 		public void Normalize()
 		{
-			this /= Magnitude();
+			float mag = Magnitude();
+			if(mag == 0)
+			{
+				x = 0;
+				y = 0;
+			}
+			else
+			{
+				x /= mag;
+				y /= mag;
+			}
 		}
 
 		public float Magnitude()
@@ -42,11 +52,28 @@ namespace MathLib
 			return x * x + y * y;
 		}
 
+		public override string ToString() => $"({x}, {y})";
+
+		public override int GetHashCode() => HashCode.Combine(x.GetHashCode(), y.GetHashCode());
+
+		public override bool Equals(object? _obj)
+		{
+			if(_obj == null)
+				return false;
+
+			return (Vec2) _obj == this;
+		}
+
 	#region Operators
 
 		public static float Distance(Vec2 _lhs, Vec2 _rhs)
 		{
 			return (_lhs - _rhs).Magnitude();
+		}
+
+		public static float Dot(Vec2 _lhs, Vec2 _rhs)
+		{
+			return _lhs.x * _rhs.x + _lhs.y * _rhs.y;
 		}
 
 		public static Vec2 operator +(Vec2 _lhs, Vec2 _rhs)
