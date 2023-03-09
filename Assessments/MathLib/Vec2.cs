@@ -16,6 +16,8 @@ namespace MathLib
 
 	#endregion
 
+		public Vec2 Normalized => this / Magnitude();
+
 		public float x;
 		public float y;
 
@@ -23,6 +25,21 @@ namespace MathLib
 		{
 			x = _x;
 			y = _y;
+		}
+
+		public void Normalize()
+		{
+			this /= Magnitude();
+		}
+
+		public float Magnitude()
+		{
+			return MathF.Sqrt(SqrMagnitude());
+		}
+
+		public float SqrMagnitude()
+		{
+			return x * x + y * y;
 		}
 
 	#region Operators
@@ -45,6 +62,11 @@ namespace MathLib
 		public static Vec2 operator *(float _lhs, Vec2 _rhs)
 		{
 			return new Vec2(_lhs * _rhs.x, _lhs * _rhs.y);
+		}
+
+		public static Vec2 operator /(Vec2 _lhs, float _rhs)
+		{
+			return new Vec2(_lhs.x / _rhs, _lhs.y / _rhs);
 		}
 
 		public static bool operator ==(Vec2 _lhs, Vec2 _rhs)
