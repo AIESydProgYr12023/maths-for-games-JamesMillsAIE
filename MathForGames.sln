@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIE06_CrossFinishLine", "Ex
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIE07_OverlappingCircles", "Exercises\AIE07_OverlappingCircles\AIE07_OverlappingCircles.csproj", "{0B90F397-5242-47C4-BBB0-0F6C34DEBA32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIE08_RotatingTetrisPiece", "Exercises\AIE08_RotatingTetrisPiece\AIE08_RotatingTetrisPiece.csproj", "{192B7C87-8D4D-4073-8634-49D261FF0B76}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +87,10 @@ Global
 		{0B90F397-5242-47C4-BBB0-0F6C34DEBA32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B90F397-5242-47C4-BBB0-0F6C34DEBA32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B90F397-5242-47C4-BBB0-0F6C34DEBA32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{192B7C87-8D4D-4073-8634-49D261FF0B76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{192B7C87-8D4D-4073-8634-49D261FF0B76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{192B7C87-8D4D-4073-8634-49D261FF0B76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{192B7C87-8D4D-4073-8634-49D261FF0B76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -101,6 +107,7 @@ Global
 		{CA685FC8-892C-4589-B6B1-DA2AFA333A4B} = {42D8ABB5-58E8-490F-9322-76A2C4A50D1F}
 		{397617A6-E184-4844-8013-7250169D4B8E} = {42D8ABB5-58E8-490F-9322-76A2C4A50D1F}
 		{0B90F397-5242-47C4-BBB0-0F6C34DEBA32} = {42D8ABB5-58E8-490F-9322-76A2C4A50D1F}
+		{192B7C87-8D4D-4073-8634-49D261FF0B76} = {42D8ABB5-58E8-490F-9322-76A2C4A50D1F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0C38F843-9D7D-4A5D-A45A-1764A250CB80}
