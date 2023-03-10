@@ -97,6 +97,43 @@
 			                _vec.x * m2 + _vec.y * m5);
 		}
 
+	#region Operators
+
+		public static Mat3 operator *(Mat3 _lhs, Mat3 _rhs)
+		{
+			return new Mat3(
+			                _lhs.m1 * _rhs.m1 + _lhs.m2 * _rhs.m4 + _lhs.m3 * _rhs.m7,
+			                _lhs.m4 * _rhs.m1 + _lhs.m5 * _rhs.m4 + _lhs.m6 * _rhs.m7,
+			                _lhs.m7 * _rhs.m1 + _lhs.m8 * _rhs.m4 + _lhs.m9 * _rhs.m7,
+			                _lhs.m1 * _rhs.m2 + _lhs.m2 * _rhs.m5 + _lhs.m3 * _rhs.m8,
+			                _lhs.m4 * _rhs.m2 + _lhs.m5 * _rhs.m5 + _lhs.m6 * _rhs.m8,
+			                _lhs.m7 * _rhs.m2 + _lhs.m8 * _rhs.m5 + _lhs.m9 * _rhs.m8,
+			                _lhs.m1 * _rhs.m3 + _lhs.m2 * _rhs.m6 + _lhs.m3 * _rhs.m9,
+			                _lhs.m4 * _rhs.m3 + _lhs.m5 * _rhs.m6 + _lhs.m6 * _rhs.m9,
+			                _lhs.m7 * _rhs.m3 + _lhs.m8 * _rhs.m6 + _lhs.m9 * _rhs.m9
+			               );
+		}
+
+		public static Vec3 operator *(Vec3 _lhs, Mat3 _rhs)
+		{
+			return new Vec3(
+			                _lhs.x * _rhs.m1 + _lhs.y * _rhs.m4 + _lhs.z * _rhs.m7,
+			                _lhs.x * _rhs.m2 + _lhs.y * _rhs.m5 + _lhs.z * _rhs.m8,
+			                _lhs.x * _rhs.m3 + _lhs.y * _rhs.m6 + _lhs.z * _rhs.m9
+			               );
+		}
+
+		public static Vec3 operator *(Mat3 _lhs, Vec3 _rhs)
+		{
+			return new Vec3(
+			                _lhs.m1 * _rhs.x + _lhs.m2 * _rhs.y + _lhs.m3 * _rhs.z,
+			                _lhs.m4 * _rhs.x + _lhs.m5 * _rhs.y + _lhs.m6 * _rhs.z,
+			                _lhs.m7 * _rhs.x + _lhs.m8 * _rhs.y + _lhs.m9 * _rhs.z
+			               );
+		}
+
+	#endregion
+
 	#region Value Getters
 
 		public Vec2 GetTranslation()
