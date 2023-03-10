@@ -38,12 +38,14 @@ namespace MathLibTests
 		[TestMethod]
 		public void Vec2PostScale()
 		{
+			// vec x float
 			Assert.Fail("Vec2 PostScale Test not implemented");
 		}
 
 		[TestMethod]
 		public void Vec2PreScale()
 		{
+			// float x vec
 			Assert.Fail("Vec2 PreScale Test not implemented");
 		}
 
