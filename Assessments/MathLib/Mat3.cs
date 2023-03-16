@@ -2,6 +2,80 @@
 {
 	public struct Mat3
 	{
+	#region Static Matrix Builders
+
+		public static Mat3 CreateTransform(Vec2 _position, float _zRotation = 0f, Vec2? _scale = null, float _xRotation = 0f, float _yRotation = 0f)
+		{
+			// ReSharper disable once MergeConditionalExpression
+			Vec2 scale = _scale.HasValue ? _scale.Value : Vec2.one;
+
+			Mat3 transMat = CreateTranslation(_position);
+			Mat3 scaleMat = CreateScale(scale);
+
+			Mat3 xRotMat = CreateXRotation(_xRotation);
+			Mat3 yRotMat = CreateYRotation(_yRotation);
+			Mat3 zRotMat = CreateZRotation(_zRotation);
+			Mat3 rotMat = xRotMat * yRotMat * zRotMat;
+
+			return transMat * rotMat * scaleMat;
+		}
+
+		public static Mat3 CreateTranslation(Vec2 _position)
+		{
+			return CreateTranslation(_position.x, _position.y);
+		}
+
+		public static Mat3 CreateTranslation(float _x, float _y)
+		{
+			return new Mat3(1, 0, _x,
+			                0, 1, _y,
+			                0, 0, 1);
+		}
+
+		public static Mat3 CreateScale(Vec2 _scale)
+		{
+			return CreateScale(_scale.x, _scale.y);
+		}
+
+		public static Mat3 CreateScale(float _x, float _y)
+		{
+			return new Mat3(_x, 0, 0,
+			                0, _y, 0,
+			                0, 0, 1);
+		}
+
+		public static Mat3 CreateXRotation(float _rot)
+		{
+			float cos = MathF.Cos(_rot);
+			float sin = MathF.Sin(_rot);
+
+			return new Mat3(1, 0, 0,
+			                0, cos, -sin,
+			                0, sin, cos);
+		}
+
+		public static Mat3 CreateYRotation(float _rot)
+		{
+			float cos = MathF.Cos(_rot);
+			float sin = MathF.Sin(_rot);
+
+			return new Mat3(cos, 0, sin,
+			                0, 1, 0,
+			                -sin, 0, cos);
+		}
+
+		public static Mat3 CreateZRotation(float _rot)
+		{
+			float cos = MathF.Cos(_rot);
+			float sin = MathF.Sin(_rot);
+
+			return new Mat3(cos, -sin, 0,
+			                sin, cos, 0,
+			                0, 0, 1);
+		}
+
+	#endregion
+
 	#region Accessor Properties
 
 		public Vec2 Translation
