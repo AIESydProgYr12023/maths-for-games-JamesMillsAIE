@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <LangVersion>latestmajor</LangVersion>
+        <RootNamespace>AIE11_Matrix3Scale</RootNamespace>
+        <OutputType>Exe</OutputType>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Raylib-cs" Version="4.0.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="Assets\" />
+        <Folder Include="Dependencies" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="Dependencies\Azimuth.dll">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="Assets\Textures\crate.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="Assets\config.cfg">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="Azimuth">
+            <HintPath>Dependencies\Azimuth.dll</HintPath>
+        </Reference>
+        <Reference Include="MathLib">
+            <HintPath>Dependencies\MathLib.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
+</Project>
