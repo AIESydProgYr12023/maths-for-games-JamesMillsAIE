@@ -45,6 +45,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIE11_Matrix3Scale", "Exerc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIE12_Matrix3Rotation", "Exercises\AIE12_Matrix3Rotation\AIE12_Matrix3Rotation.csproj", "{1D3D7171-79C4-43A5-8271-E6C8512D3914}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIE13_MatrixMultiplication", "Exercises\AIE13_MatrixMultiplication\AIE13_MatrixMultiplication.csproj", "{E6861BF6-3B1D-4108-8FA1-14866EAC480E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -115,6 +117,10 @@ Global
 		{1D3D7171-79C4-43A5-8271-E6C8512D3914}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D3D7171-79C4-43A5-8271-E6C8512D3914}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D3D7171-79C4-43A5-8271-E6C8512D3914}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6861BF6-3B1D-4108-8FA1-14866EAC480E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6861BF6-3B1D-4108-8FA1-14866EAC480E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6861BF6-3B1D-4108-8FA1-14866EAC480E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6861BF6-3B1D-4108-8FA1-14866EAC480E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -136,6 +142,7 @@ Global
 		{25E1668C-E920-40F5-9A9C-78D4C5100422} = {42D8ABB5-58E8-490F-9322-76A2C4A50D1F}
 		{C72395F8-9DD4-4F7B-88D8-9B316F0291C2} = {42D8ABB5-58E8-490F-9322-76A2C4A50D1F}
 		{1D3D7171-79C4-43A5-8271-E6C8512D3914} = {42D8ABB5-58E8-490F-9322-76A2C4A50D1F}
+		{E6861BF6-3B1D-4108-8FA1-14866EAC480E} = {42D8ABB5-58E8-490F-9322-76A2C4A50D1F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0C38F843-9D7D-4A5D-A45A-1764A250CB80}
