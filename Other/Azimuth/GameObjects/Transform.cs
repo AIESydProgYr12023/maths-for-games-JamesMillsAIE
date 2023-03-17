@@ -6,7 +6,7 @@ namespace Azimuth.GameObjects
 	{
 		public Transform? Parent { get; private set; }
 
-		public Mat3 GlobalTransform => Parent == null ? transform : transform * Parent.transform;
+		public Mat3 GlobalTransform => Parent == null ? transform : transform * Parent.GlobalTransform;
 
 		public Mat3 transform;
 		

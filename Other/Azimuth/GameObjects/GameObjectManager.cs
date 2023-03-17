@@ -25,7 +25,13 @@
 		public static void Update(float _deltaTime)
 		{
 			foreach(GameObject gameObject in gameObjects)
+			{
 				gameObject.Update(_deltaTime);
+				if(gameObject.transform.Parent == null)
+				{
+					gameObject.transform.Update();
+				}
+			}
 		}
 
 		public static void Draw()
