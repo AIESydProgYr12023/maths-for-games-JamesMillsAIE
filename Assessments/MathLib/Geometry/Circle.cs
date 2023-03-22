@@ -57,5 +57,23 @@
 
 			return hit;
 		}
+
+		public Hit? Intersects(Rect _rect)
+		{
+			Vec2 closestPoint = center;
+
+			closestPoint.x = closestPoint.x < _rect.Min.x ? _rect.Min.x : closestPoint.x;
+			closestPoint.y = closestPoint.y < _rect.Min.y ? _rect.Min.y : closestPoint.y;
+			
+			closestPoint.x = closestPoint.x > _rect.Max.x ? _rect.Max.x : closestPoint.x;
+			closestPoint.y = closestPoint.y > _rect.Max.y ? _rect.Max.y : closestPoint.y;
+
+			Vec2 vec = center - closestPoint;
+
+			if(vec.SqrMagnitude() > radius * radius)
+				return null;
+
+			return null;
+		}
 	}
 }

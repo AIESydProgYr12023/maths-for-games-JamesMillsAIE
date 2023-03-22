@@ -22,10 +22,13 @@ namespace Azimuth
 			Instance = new Application(new GAME());
 			Instance.Run();
 		}
+
+		public static void Quit() => Instance!.running = false;
 		
 		public Window Window { get; }
 
 		private readonly Game game;
+		private bool running = true;
 
 		private Application(Game _game)
 		{
@@ -41,7 +44,7 @@ namespace Azimuth
 			
 			game.Load();
 
-			while(!Raylib.WindowShouldClose())
+			while(running)
 			{
 				float deltaTime = Raylib.GetFrameTime();
 				game.Update(deltaTime);
@@ -63,6 +66,9 @@ namespace Azimuth
 				UIManager.Draw();
 				
 				Raylib.EndDrawing();
+
+				if(Raylib.WindowShouldClose())
+					running = false;
 			}
 			
 			game.Unload();

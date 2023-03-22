@@ -1,7 +1,10 @@
-﻿using System.Numerics;
+﻿using Newtonsoft.Json;
+
+using System.Numerics;
 
 namespace MathLib
 {
+	[JsonObject(MemberSerialization.OptIn)]
 	public struct Vec2
 	{
 	#region Global Constant Vectors
@@ -19,8 +22,8 @@ namespace MathLib
 		public Vec2 Normalized => this / Magnitude();
 		public float Rotation => Azimath.Atan2(y, x);
 
-		public float x;
-		public float y;
+		[JsonProperty] public float x;
+		[JsonProperty] public float y;
 
 		public Vec2(float _x, float _y)
 		{
@@ -86,6 +89,13 @@ namespace MathLib
 		}
 
 	#region Operators
+
+		public static Vec2 Lerp(Vec2 _a, Vec2 _b, float _t)
+		{
+			_t = Azimath.Clamp01(_t);
+			
+			return _a * (1 - _t) + _b * _t;
+		}
 
 		public static float Distance(Vec2 _lhs, Vec2 _rhs)
 		{

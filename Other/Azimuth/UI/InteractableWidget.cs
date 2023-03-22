@@ -10,7 +10,7 @@ namespace Azimuth.UI
 
 		public bool Interactable { get; set; } = true;
 
-		private ColorBlock colors;
+		protected ColorBlock colors;
 
 		protected InteractableWidget(Vec2 _position, Vec2 _size, ColorBlock _colors) 
 			: base(_position, _size)

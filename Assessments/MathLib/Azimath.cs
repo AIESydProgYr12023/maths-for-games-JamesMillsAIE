@@ -78,13 +78,21 @@
 		/// <param name="_value">The number we are clamping.</param>
 		public static float Clamp01(float _value)
 		{
-			if(_value < 0f)
-				return 0f;
+			return Clamp(_value, 0f, 1f);
+		}
 
-			if(_value > 1f)
-				return 1f;
+		public static float Lerp(float _a, float _b, float _t)
+		{
+			_t = Clamp01(_t);
 
-			return _value;
+			return _a * (1 - _t) + _b * _t;
+		}
+
+		public static int Lerp(int _a, int _b, float _t)
+		{
+			_t = Clamp01(_t);
+
+			return (int) (_a * (1 - _t) + _b * _t);
 		}
 
 		/// <summary>Checks if two floats are almost or exactly the same value.</summary>

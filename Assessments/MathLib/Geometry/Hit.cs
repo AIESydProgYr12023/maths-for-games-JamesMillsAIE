@@ -1,6 +1,6 @@
 ﻿namespace MathLib.Geometry
 {
-	public struct Hit
+	public class Hit
 	{
 		// This is the point of contact between 2 objects
 		public Vec2 point;

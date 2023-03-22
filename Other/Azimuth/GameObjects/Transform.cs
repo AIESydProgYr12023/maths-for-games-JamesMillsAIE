@@ -6,6 +6,26 @@ namespace Azimuth.GameObjects
 	{
 		public Transform? Parent { get; private set; }
 
+		public Vec2 LocalPosition => transform.Translation;
+
+		public Vec2 Position
+		{
+			get => GlobalTransform.Translation;
+			set => transform.Translation = value;
+		}
+
+		public float Rotation
+		{
+			get => GlobalTransform.GetRotationX() * Azimath.RAD_2_DEG;
+			set => SetRotation(value * Azimath.DEG_2_RAD);
+		}
+
+		public Vec2 Scale
+		{
+			get => GlobalTransform.Scale;
+			set => transform.Scale = value;
+		}
+
 		public Mat3 GlobalTransform => Parent == null ? transform : transform * Parent.GlobalTransform;
 
 		public Mat3 transform;
@@ -65,5 +85,7 @@ namespace Azimuth.GameObjects
 				_parent.AddChild(this);
 			}
 		}
+
+		private void SetRotation(float _radians) => transform.SetZRotation(_radians);
 	}
 }
