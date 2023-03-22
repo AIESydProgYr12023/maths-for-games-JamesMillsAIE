@@ -13,6 +13,7 @@ namespace TowerDefense.GameStates
 
 		private TileMapGameObject? tileMap;
 		private List<TowerSlotGameObject> slots = new();
+		private List<TowerBaseGameObject> bases = new();
 
 		public void Load()
 		{
@@ -32,6 +33,11 @@ namespace TowerDefense.GameStates
 			
 			slots.Clear();
 
+			foreach(TowerBaseGameObject tb in bases)
+				GameObjectManager.Destroy(tb);
+
+			bases.Clear();
+			
 			if(tileMap != null)
 				GameObjectManager.Destroy(tileMap);
 		}
@@ -57,6 +63,11 @@ namespace TowerDefense.GameStates
 				slots.Remove(_slot);
 			
 			// Spawn the tower base
+			TowerBaseGameObject towerBase = new(_slot.transform.LocalPosition);
+			towerBase.transform.SetParent(tileMap.transform);
+			
+			bases.Add(towerBase);
+			GameObjectManager.Spawn(towerBase);
 		}
 	}
 }
