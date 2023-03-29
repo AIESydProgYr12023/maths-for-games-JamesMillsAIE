@@ -59,6 +59,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIE21_Interpolation", "Exer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TowerDefense", "Other\TowerDefense\TowerDefense.csproj", "{C8A4DFCC-3622-4FCA-A872-29EFF2AA788E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIE22_Curves", "Exercises\AIE22_Curves\AIE22_Curves.csproj", "{33F74630-04FA-44D4-ACDD-79669258EB1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -157,6 +159,10 @@ Global
 		{C8A4DFCC-3622-4FCA-A872-29EFF2AA788E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8A4DFCC-3622-4FCA-A872-29EFF2AA788E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8A4DFCC-3622-4FCA-A872-29EFF2AA788E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33F74630-04FA-44D4-ACDD-79669258EB1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33F74630-04FA-44D4-ACDD-79669258EB1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33F74630-04FA-44D4-ACDD-79669258EB1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33F74630-04FA-44D4-ACDD-79669258EB1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -185,6 +191,7 @@ Global
 		{C9E15CCE-D2CF-4B09-8D4D-E4A7116211C6} = {42D8ABB5-58E8-490F-9322-76A2C4A50D1F}
 		{46C03786-DE93-495E-9699-CD4CB35349F6} = {42D8ABB5-58E8-490F-9322-76A2C4A50D1F}
 		{C8A4DFCC-3622-4FCA-A872-29EFF2AA788E} = {CEB09D4E-4B90-41B2-B2FF-A2EF181470AD}
+		{33F74630-04FA-44D4-ACDD-79669258EB1F} = {42D8ABB5-58E8-490F-9322-76A2C4A50D1F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0C38F843-9D7D-4A5D-A45A-1764A250CB80}
