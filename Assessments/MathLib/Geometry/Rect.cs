@@ -2,7 +2,7 @@
 
 namespace MathLib.Geometry
 {
-	public struct Rect
+	public struct Rect : IShape
 	{
 		// The top left hand corner of the shape
 		public Vec2 Min => center - extents;
@@ -12,7 +12,7 @@ namespace MathLib.Geometry
 
 		// The total size of the shape from edge to edge
 		public Vec2 Size => extents * 2;
-		
+
 		// The position
 		public Vec2 center;
 
@@ -87,7 +87,7 @@ namespace MathLib.Geometry
 				return null;
 
 			Hit hit = new Hit();
-			
+
 			if(overlap.x < overlap.y)
 			{
 				float xDir = vec.x < 0 ? -1 : 1;
@@ -110,5 +110,12 @@ namespace MathLib.Geometry
 
 		public static implicit operator Rectangle(Rect _rect) =>
 			new(_rect.center.x - _rect.extents.x, _rect.center.y - _rect.extents.y, _rect.Size.x, _rect.Size.y);
+
+		public Hit? Intersects<SHAPE>(SHAPE _other) where SHAPE : IShape => _other switch
+		{
+			Circle circle => Intersects(circle),
+			Rect rect => Intersects(rect),
+			_ => null
+		};
 	}
 }

@@ -1,6 +1,6 @@
 ﻿namespace MathLib.Geometry
 {
-	public struct Circle
+	public struct Circle : IShape
 	{
 		public Vec2 center;
 		public float radius;
@@ -75,5 +75,7 @@
 
 			return null;
 		}
+
+		public Hit? Intersects<SHAPE>(SHAPE _other) where SHAPE : IShape => throw new NotImplementedException();
 	}
 }
